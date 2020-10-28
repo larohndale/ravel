@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ravel-4b2e2": {
+      "hosting": {
+        "ravel": [
+          "ravel-4b2e2"
+        ]
+      }
+    }
+  }
+}

@@ -121,8 +121,16 @@
               "devServerTarget": "ravel:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "ravel"
+    }
+  },
+  "defaultProject": "ravel",
+  "cli": {
+    "analytics": "42391c87-f94f-4d8b-b18b-9fa3c9182a0c"
+  }
 }
