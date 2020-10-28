@@ -12,9 +12,12 @@ import { environment } from "src/environments/environment.prod";
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BlogComponent } from './routes/blog/blog.component';
 import { UserComponent } from './routes/user/user.component';
+import { CategoriesComponent } from './routes/home/categories/categories.component';
+import { TrendingComponent } from './routes/home/trending/trending.component';
+import { PostsComponent } from './routes/home/posts/posts.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, CodeComponent, ContentComponent, NavbarComponent, BlogComponent, UserComponent],
+  declarations: [AppComponent, HomeComponent, CodeComponent, ContentComponent, NavbarComponent, BlogComponent, UserComponent, CategoriesComponent, TrendingComponent, PostsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
