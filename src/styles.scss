@@ -8,3 +8,10 @@
   font-family: "Poppins", Verdana, "Roboto Slab", sans-serif;
   color: $text-primary;
 }
+
+html,
+body {
+  background: $background;
+  margin: 0;
+  padding: 0;
+}
