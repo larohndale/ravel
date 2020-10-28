@@ -9,9 +9,12 @@ import { ContentComponent } from "./components/blog/content/content.component";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { environment } from "src/environments/environment.prod";
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { BlogComponent } from './routes/blog/blog.component';
+import { UserComponent } from './routes/user/user.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, CodeComponent, ContentComponent],
+  declarations: [AppComponent, HomeComponent, CodeComponent, ContentComponent, NavbarComponent, BlogComponent, UserComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
