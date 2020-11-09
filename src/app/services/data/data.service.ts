@@ -16,10 +16,10 @@ export class DataService {
     /// User
     this.userService.getCurrentUser();
     /// Articles
-    UserService.user.subscribe((user: UserInterface) => {
-      if (!user) return;
-      this.articleService.getUserSuggestions();
-      this.articleService.getTrending();
-    });
+    // UserService.user.subscribe((user: UserInterface) => {
+    //   if (!user) return;
+    //   this.articleService.getUserSuggestions();
+    //   this.articleService.getTrending();
+    // });
   }
 }

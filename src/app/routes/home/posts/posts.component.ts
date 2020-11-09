@@ -13,6 +13,7 @@ export class PostsComponent implements OnInit {
 
   ngOnInit(): void {
     this.articleService.userSuggestions.subscribe((articleIds: string[]) => {
+      if (!articleIds) return;
       this.articleIds = articleIds;
     });
   }

@@ -1,4 +1,19 @@
 <ng-container *ngIf="article; else loadingArticle">
-  {{ article.id }}
+  <div class="card">
+    <div class="thumbnail">
+      <img [src]="article.thumbnail" alt="" />
+    </div>
+    <div class="content">
+      <div class="author">
+        <img src="" alt="" />
+        <div class="name">{{ article.author }}</div>
+      </div>
+      <div class="title">{{ article.title }}</div>
+      <div class="short-desc">{{ article.shortDesc }}</div>
+    </div>
+    <div class="date-published">
+      {{ article.datePublished | date: "dd MMMM yyyy" }}
+    </div>
+  </div>
 </ng-container>
 <ng-template #loadingArticle> Loading {{ id }} </ng-template>

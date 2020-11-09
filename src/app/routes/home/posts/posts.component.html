@@ -1,8 +1,10 @@
 <ng-container *ngIf="articleIds; else loginContainer">
-  <article-card
-    [id]="articleId"
-    *ngFor="let articleId of articleIds"
-  ></article-card>
+  <div class="cards">
+    <article-card
+      [id]="articleId"
+      *ngFor="let articleId of articleIds"
+    ></article-card>
+  </div>
 </ng-container>
 
 <ng-template #loginContainer> Logging in!! </ng-template>
