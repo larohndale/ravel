@@ -4,5 +4,12 @@
     <div class="name">Ravel</div>
   </div>
   <div class="tools">Tools</div>
-  <div class="user">Yogesh Aggarwal</div>
+  <div class="user">
+    <ng-container *ngIf="user; else login">
+      {{ user.name }}
+    </ng-container>
+    <ng-template #login>
+      <button (click)="userService.signIn()">Login</button>
+    </ng-template>
+  </div>
 </div>
