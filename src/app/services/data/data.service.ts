@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { ArticleService } from "../article/article.service";
+import { UserInterface } from "../user/interface";
 import { UserService } from "../user/user.service";
 
 @Injectable({
@@ -15,7 +16,10 @@ export class DataService {
     /// User
     this.userService.getCurrentUser();
     /// Articles
-    this.articleService.getUserSuggestions();
-    this.articleService.getTrending();
+    UserService.user.subscribe((user: UserInterface) => {
+      if (!user) return;
+      this.articleService.getUserSuggestions();
+      this.articleService.getTrending();
+    });
   }
 }

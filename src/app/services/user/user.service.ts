@@ -35,6 +35,7 @@ export class UserService {
 
   async parseUserData(user: firebase.User) {
     if (!user) return;
+    console.log("Fgfg");
     const cloudUser: UserInterface = ((await this.firestore
       .collection("users")
       .doc(user.uid)
