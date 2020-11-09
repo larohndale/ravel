@@ -13,6 +13,8 @@ export class ArticleService {
   articles: BehaviorSubject<{
     [key: string]: ArticleInterface;
   }> = new BehaviorSubject({});
+  userSuggestions: BehaviorSubject<string[]> = new BehaviorSubject(null);
+  trending: BehaviorSubject<string[]> = new BehaviorSubject(null);
 
   constructor(private firestore: AngularFirestore) {}
 
@@ -67,6 +69,7 @@ export class ArticleService {
       ).data()?.articles;
 
       if (!articleIds) return;
+      this.userSuggestions.next(articleIds);
       this.getArticlesByIds(articleIds);
     }
   }
@@ -84,6 +87,7 @@ export class ArticleService {
       ).data()?.articles;
 
       if (!articleIds) return;
+      this.userSuggestions.next(articleIds);
       this.getArticlesByIds(articleIds);
     }
   }
