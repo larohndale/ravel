@@ -1,2 +1,4 @@
-<p>article-card works!</p>
-{{ article.id }}
+<ng-container *ngIf="article; else loadingArticle">
+  {{ article.id }}
+</ng-container>
+<ng-template #loadingArticle> Loading {{ id }} </ng-template>
