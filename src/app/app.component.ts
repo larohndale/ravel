@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { DataService } from "./services/data/data.service";
 
 @Component({
   selector: "app-root",
@@ -6,5 +7,9 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent implements OnInit {
-  ngOnInit(): void {}
+  constructor(private dataService: DataService) {}
+
+  ngOnInit(): void {
+    this.dataService.prepareData();
+  }
 }
