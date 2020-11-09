@@ -20,6 +20,7 @@ export class DataService {
       if (!user) return;
       this.articleService.getUserSuggestions();
       this.articleService.getTrending();
+      this.articleService.articles.subscribe(console.log);
     });
   }
 }
