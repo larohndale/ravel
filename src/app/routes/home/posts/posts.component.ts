@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { ArticleService } from "src/app/services/article/article.service";
 
 @Component({
   selector: "home-posts",
@@ -6,7 +7,13 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./posts.component.scss"],
 })
 export class PostsComponent implements OnInit {
-  constructor() {}
+  articleIds: string[];
 
-  ngOnInit(): void {}
+  constructor(private articleService: ArticleService) {}
+
+  ngOnInit(): void {
+    this.articleService.userSuggestions.subscribe((articleIds: string[]) => {
+      this.articleIds = articleIds;
+    });
+  }
 }
